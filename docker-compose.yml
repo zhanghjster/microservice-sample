@@ -1,0 +1,13 @@
+version: "3"
+services:
+  account:
+    image: "zhanghjster/accountservice:dev"
+    ports:
+      - 6767:6767
+    networks:
+      - my_network
+    deploy:
+      mode: global
+networks:
+  my_network:
+    external: true
